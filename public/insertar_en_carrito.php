@@ -8,6 +8,8 @@ require '../vendor/autoload.php';
 
 try {
     $id = obtener_get('id');
+    $cat = obtener_get('cat');
+
 
     if ($id === null) {
         return volver();
@@ -31,4 +33,4 @@ try {
     // TODO: mostrar mensaje de error en un Alert
 }
 
-volver();
+volverCategoria($cat);

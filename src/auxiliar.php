@@ -2,7 +2,7 @@
 
 function conectar()
 {
-    return new \PDO('pgsql:host=localhost,dbname=cele', 'cele', 'cele');
+    return new \PDO('pgsql:host=localhost,dbname=cele', 'tienda', 'tienda');
 }
 
 function hh($x)
@@ -33,6 +33,11 @@ function obtener_parametro($par, $array)
 function volver()
 {
     header('Location: /index.php');
+}
+
+function volverCategoria($categoria)
+{
+    header("Location: /index.php?id=$categoria");
 }
 
 function carrito()
